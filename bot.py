@@ -5,8 +5,11 @@ import discord
 from discord.ext.commands import Bot
 from discord.ext import commands
 activity = discord.Game(name="Smirf Made Me")
+from dotenv import load_dotenv
 
-TOKEN = 'No Token 4 U'
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+
 
 client = discord.Client()
 
@@ -24,4 +27,8 @@ async def on_message(message):
        await message.channel.send('pong')
     if message.content.startswith('Im'):
        await message.channel.send('Hi +ctx.message.author.mention, Im dad')
+    if message.content.startswith('!help'):
+       await message.channel.send('I am Smirf123#5911 creation, I am a work in progress, I can only do Ping, and Help atm but will be updated in the future')
+    if message.content.startswith('!creator'):
+       await message.channel.send('The man who created me is Smirf123#5911, he has made a few other bots but this is his fisrt one based on Python, follow him on twitch https://twitch.tv/smirf123')
 client.run(TOKEN)
