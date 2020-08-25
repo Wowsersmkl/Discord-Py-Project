@@ -1,14 +1,14 @@
 # bot.py
-import os
 
 import discord
+import requests
+import json
 from discord.ext.commands import Bot
 from discord.ext import commands
-activity = discord.Game(name="Smirf Made Me")
-from dotenv import load_dotenv
+loading = discord.emoji 
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+TOKEN = ('Token Here')
+activity = discord.Game(name="Smirf Made Me")
 
 
 client = discord.Client()
@@ -34,5 +34,8 @@ async def on_message(message):
     if message.content.startswith('!meme'):
        await message.channel.send('It is wednesday my dudes')
     if message.content.startswith('!random'):
-       await message.channel.send('https://imgur.com/random')
+       await message.channel.send('Gettin ya a meme :loading:')
+       response = requests.get("https://some-random-api.ml/meme")
+       results = (response[0]['image'])
+       await message.channel.send(results)
 client.run(TOKEN)
