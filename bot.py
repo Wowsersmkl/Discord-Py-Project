@@ -26,7 +26,7 @@ async def on_message(message):
     if message.content.startswith('!ping'):
        await message.channel.send('pong')
     if message.content.startswith('Im'):
-       await message.channel.send('Hi Im dad'format(k, ctx.message.author.mention))
+       await message.channel.send("Hi Im dad")
     if message.content.startswith('!help'):
        await message.channel.send('I am Smirf123#5911 creation, I am a work in progress, I can only do Ping, and Help atm but will be updated in the future')
     if message.content.startswith('!creator'):
