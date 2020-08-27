@@ -5,10 +5,10 @@ import requests
 import json
 from discord.ext.commands import Bot
 from discord.ext import commands
-loading = discord.emoji 
+loading = '<:loading:747680523459231834>'
 
 TOKEN = ('Bot Token Here')
-activity = discord.Game(name="Smirf Made Me")
+activity = discord.Game(name="Smirf Deployed Me")
 
 
 client = discord.Client()
@@ -34,9 +34,12 @@ async def on_message(message):
     if message.content.startswith('!meme'):
        await message.channel.send('It is wednesday my dudes')
     if message.content.startswith('!rmeme'):
-       await message.channel.send('Gettin ya a meme :loading:')
+       await message.channel.send('Gettin ya a meme')
        r = requests.get("https://meme-api.herokuapp.com/gimme")
        json_response = r.json()
        image = json_response['postLink']
        await message.channel.send(image)
+@client.event
+async def on_member_join(member):
+   await member.send("Welcome to the Server my dude")
 client.run(TOKEN)
