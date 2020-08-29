@@ -3,11 +3,20 @@
 import discord
 import requests
 import json
+import sqlite3
 from discord.ext.commands import Bot
 from discord.ext import commands
+<<<<<<< HEAD
+conn = sqlite3.connect('servers.db')
+c = conn.cursor()
+loading = '<:loading:747680523459231834>'
+
+TOKEN = ('BOT TOKEN HERE')
+=======
 loading = '<:loading:747680523459231834>'
 
 TOKEN = ('Bot Token Here')
+>>>>>>> 18e344cce55b2c2861e4394ee5108ee8996675c3
 activity = discord.Game(name="Smirf Deployed Me")
 
 
@@ -39,7 +48,26 @@ async def on_message(message):
        json_response = r.json()
        image = json_response['postLink']
        await message.channel.send(image)
+<<<<<<< HEAD
+    if message.content.startswith('!settingsetup'):
+       await message.channel.send('Setting your server up in our database, you can delete your server from our database at any time')
+       async def getguild(ctx):
+          id = ctx.message.guild.id
+       c.execute("INSERT INTO Settings (SERVERID) VALUES (?)",
+                 (id))
+       await message.channel.send('Your Server Has Been Setup')
 @client.event
 async def on_member_join(member):
    await member.send("Welcome to the Server my dude")
+   await member.send("Let our staff know if you need anything to make this experience any better")
+   await member.send("Bot Made by Smirf123#5911")
+
+@client.event
+async def on_guild_join(guild):
+   print("Joined new guild")
+=======
+@client.event
+async def on_member_join(member):
+   await member.send("Welcome to the Server my dude")
+>>>>>>> 18e344cce55b2c2861e4394ee5108ee8996675c3
 client.run(TOKEN)
