@@ -52,6 +52,8 @@ async def on_message(message):
         await message.channel.send("Potato")
     if message.content.startswith('!turtles'):
         await message.channel.send("I like turtles")
+    if message.content.startswith('!lbrp);
+        await message.channel.send("https://discord.gg/fXtWJcP")
 <<<<<<< HEAD
     if message.content.startswith('!settingsetup'):
        await message.channel.send('Setting your server up in our database, you can delete your server from our database at any time')
