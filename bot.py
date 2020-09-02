@@ -48,6 +48,8 @@ async def on_message(message):
        json_response = r.json()
        image = json_response['postLink']
        await message.channel.send(image)
+    if message.content.startswith('!tomato'):
+        await message.channel.send("Potato")
 <<<<<<< HEAD
     if message.content.startswith('!settingsetup'):
        await message.channel.send('Setting your server up in our database, you can delete your server from our database at any time')
