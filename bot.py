@@ -6,17 +6,14 @@ import json
 import sqlite3
 from discord.ext.commands import Bot
 from discord.ext import commands
-<<<<<<< HEAD
 conn = sqlite3.connect('servers.db')
 c = conn.cursor()
 loading = '<:loading:747680523459231834>'
 
 TOKEN = ('BOT TOKEN HERE')
-=======
 loading = '<:loading:747680523459231834>'
 
 TOKEN = ('Bot Token Here')
->>>>>>> 18e344cce55b2c2861e4394ee5108ee8996675c3
 activity = discord.Game(name="Smirf Deployed Me")
 
 
@@ -71,9 +68,7 @@ async def on_member_join(member):
 @client.event
 async def on_guild_join(guild):
    print("Joined new guild")
-=======
 @client.event
 async def on_member_join(member):
    await member.send("Welcome to the Server my dude")
->>>>>>> 18e344cce55b2c2861e4394ee5108ee8996675c3
 client.run(TOKEN)
