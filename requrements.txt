@@ -1,0 +1,4 @@
+Discord.py
+requests
+json
+sqlite3
