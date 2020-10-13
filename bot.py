@@ -10,7 +10,7 @@ conn = sqlite3.connect('servers.db')
 c = conn.cursor()
 loading = '<:loading:747680523459231834>'
 
-TOKEN = ('NzUwMDk1ODIzMzkxNDI0Njkz.X01jLA.Y6uEdgR9oDG7VsJXdOjm1O5B4sE')
+TOKEN = ('NzUwMTk0Mzg3MjY2NDM3MTcx.X02-9w.7U1oyn-O-2L4qOHBlkn2T1kknzA')
 loading = '<:loading:747680523459231834>'
 
 TOKEN = ('NzUwMDI1NTAyNjk3MzI0NjEw.X00hrg.bAvlHDU-QgMt2MhLHl0G9DDn8K4')
