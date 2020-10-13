@@ -10,10 +10,10 @@ conn = sqlite3.connect('servers.db')
 c = conn.cursor()
 loading = '<:loading:747680523459231834>'
 
-TOKEN = ('BOT TOKEN HERE')
+TOKEN = ('NzY0OTY5Nzk2OTE5MzYxNTU3.X4N_pA.Av-fJwOFEqVtU4HLh8w3uCA4PYY')
 loading = '<:loading:747680523459231834>'
 
-TOKEN = ('Bot Token Here')
+TOKEN = ('NzY0OTY5Nzk2OTE5MzYxNTU3.X4N_pA.Av-fJwOFEqVtU4HLh8w3uCA4PYY)
 activity = discord.Game(name="Smirf Deployed Me")
 
 
